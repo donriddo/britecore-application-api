@@ -36,7 +36,7 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = ['localhost', 'hsttpx65oi.execute-api.us-west-2.amazonaws.com']
 
 CORS_ORIGIN_WHITELIST = (
-    'brite-core-insurance.herokuapp.com',
+    'brite-core-insurance.surge.sh',
     'localhost:8080',
     '127.0.0.1:8080'
 )

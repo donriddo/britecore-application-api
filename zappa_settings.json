@@ -5,14 +5,6 @@
         "profile_name": "default",
         "project_name": "insurance-api",
         "runtime": "python3.6",
-        "s3_bucket": "insurance-api-bucket",
-        "vpc_config" : {
-            "SubnetIds": [
-                "subnet-a4b990cc",
-                "subnet-6bdfb811",
-                "subnet-9204cade"
-            ],
-            "SecurityGroupIds": [ "sg-0d82f789eff7b77db" ]
-        }
+        "s3_bucket": "insurance-api-bucket"
     }
 }
