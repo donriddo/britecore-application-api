@@ -3,7 +3,7 @@
 Running on [Python3.6.0]
 
 Server instance launched on AWS Lambda with Zappa
-(https://hsttpx65oi.execute-api.us-west-2.amazonaws.com/dev/)
+(https://0n06dowzs1.execute-api.us-east-2.amazonaws.com/dev_us_east_2)
 
 Vue Frontend running at (https://britecore-insurance.surge.sh)
 
@@ -33,3 +33,5 @@ Vue Frontend running at (https://britecore-insurance.surge.sh)
 
 3. Have another table Risk that stores submitted generated data from the form
   - json_body: text field storing the JSON stringified object
+
+<img src="https://i.ibb.co/fXm5TWp/Screen-Shot-2018-11-30-at-1-32-10-PM.png" />

@@ -33,10 +33,14 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['localhost', 'hsttpx65oi.execute-api.us-west-2.amazonaws.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    'hsttpx65oi.execute-api.us-west-2.amazonaws.com',
+    '0n06dowzs1.execute-api.us-east-2.amazonaws.com'
+]
 
 CORS_ORIGIN_WHITELIST = (
-    'brite-core-insurance.surge.sh',
+    'https://britecore-insurance.surge.sh',
     'localhost:8080',
     '127.0.0.1:8080'
 )
@@ -116,9 +120,12 @@ WSGI_APPLICATION = 'insurance_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'zappa_django_utils.db.backends.s3sqlite',
-        'NAME': 'sqlite.db',
-        'BUCKET': 'insurance-api-bucket'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'britecoreinsurance',
+        'USER': 'donriddo',
+        'PASSWORD': env('RDS_PASSWORD'),
+        'HOST': env('RDS_HOST'),
+        'PORT': '5432'
     }
 }
 
