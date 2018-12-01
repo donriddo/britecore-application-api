@@ -39,6 +39,8 @@ ALLOWED_HOSTS = [
     '0n06dowzs1.execute-api.us-east-2.amazonaws.com'
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 CORS_ORIGIN_WHITELIST = (
     'https://britecore-insurance.surge.sh',
     'localhost:8080',
