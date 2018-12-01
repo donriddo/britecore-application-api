@@ -1,9 +1,9 @@
-# ![BRITECORE ENGINEERING APPLICATION]
+# BRITECORE ENGINEERING APPLICATION
 
 Running on [Python3.6.0]
 
 Server instance launched on AWS Lambda with Zappa
-(https://0n06dowzs1.execute-api.us-east-2.amazonaws.com/dev_us_east_2)
+https://0n06dowzs1.execute-api.us-east-2.amazonaws.com/dev_us_east_2
 
 Vue Frontend running at (https://britecore-insurance.surge.sh)
 
