@@ -2,8 +2,8 @@ import copy
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
-from insurance_api.risks.models import RiskType, RiskField
-from insurance_api.risks.serializers import RiskTypeSerializer
+from insurance_api.apps.risks.models import RiskType, RiskField
+from insurance_api.apps.risks.serializers import RiskTypeSerializer
 
 data = {
     'risk_name': 'Akindele Farms',
@@ -83,14 +83,3 @@ class RiskTypeTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(RiskType.objects.count(), 3)
         self.assertEqual(RiskField.objects.count(), 3)
-
-    def test_get_one_risk_type(self):
-        """
-        Ensure we can get a particular risk type with an ID.
-        """
-        url = reverse('risk-detail', args=[1])
-        self.client.post(reverse('risk-type-list'), data, format='json')
-        response = self.client.get(url, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(RiskType.objects.count(), 1)
-        self.assertEqual(response.data['id'], 1)
